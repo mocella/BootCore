@@ -1,0 +1,33 @@
+﻿@model BootCore.ViewModels.Account.RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h2><i class="fa fa-user"></i> @ViewData["Title"]</h2>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <form asp-controller="Account" asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
+            <h4>Create a new account.</h4>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+
+            @Html.Partial("_UserConfirmPassword")
+
+           
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <button type="submit" class="btn btn-success">
+                        <i class="fa fa-user"></i>
+                        <span> Register</span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

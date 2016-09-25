@@ -1,0 +1,5 @@
+﻿{
+  "ConnectionStrings": {
+    "SiteContextConnection": "Server=(localdb)\\MSSQLLocalDB;Database=BootCoreDb;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+}
